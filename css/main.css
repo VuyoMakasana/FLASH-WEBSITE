@@ -1,0 +1,189 @@
+/* ============================================================
+   FLASH — main.css
+   Global resets, base styles, typography foundation
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,300&display=swap');
+@import './variables.css';
+@import './components.css';
+@import './responsive.css';
+
+/* ── Reset ─────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--flash-black);
+  color: var(--flash-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input, textarea, select {
+  font-family: inherit;
+}
+
+/* ── Accessibility ─────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--flash-amber-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: calc(var(--z-nav) + 10);
+  padding: var(--space-3) var(--space-6);
+  background: var(--flash-amber-500);
+  color: var(--flash-black);
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: top var(--dur-fast);
+}
+.skip-link:focus { top: var(--space-4); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Reduced motion ────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Typography utilities ──────────────────────────────── */
+.text-white    { color: var(--flash-white); }
+.text-amber    { color: var(--flash-amber-500); }
+.text-gray-400 { color: var(--flash-gray-400); }
+.text-gray-500 { color: var(--flash-gray-500); }
+
+.font-black { font-weight: 900; }
+.font-bold  { font-weight: 700; }
+.font-semi  { font-weight: 600; }
+.font-med   { font-weight: 500; }
+
+.tracking-tight   { letter-spacing: -0.03em; }
+.tracking-tighter { letter-spacing: -0.04em; }
+.tracking-wide    { letter-spacing: 0.06em; }
+.tracking-wider   { letter-spacing: 0.12em; }
+
+/* ── Layout utilities ──────────────────────────────────── */
+.container {
+  width: 100%;
+  max-width: var(--max-w-content);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-5);
+  padding-right: var(--space-5);
+}
+
+@media (min-width: 640px) {
+  .container { padding-left: var(--space-8); padding-right: var(--space-8); }
+}
+
+@media (min-width: 1024px) {
+  .container { padding-left: var(--space-12); padding-right: var(--space-12); }
+}
+
+.section-pad {
+  padding-top: var(--space-20);
+  padding-bottom: var(--space-20);
+}
+
+@media (min-width: 1024px) {
+  .section-pad { padding-top: var(--space-32); padding-bottom: var(--space-32); }
+}
+
+/* ── Backgrounds ───────────────────────────────────────── */
+.bg-dark     { background-color: var(--flash-black); }
+.bg-dark-alt { background-color: var(--flash-black-alt); }
+.bg-surface  { background-color: var(--flash-surface); }
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(245,158,11,0.07) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ── Scroll-triggered animations ───────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity var(--dur-xslow) var(--ease-out),
+              transform var(--dur-xslow) var(--ease-out);
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity var(--dur-xslow) var(--ease-out);
+}
+.fade-in.in-view { opacity: 1; }
+
+/* ── Inline link ───────────────────────────────────────── */
+.link-amber {
+  color: var(--flash-amber-500);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--dur-fast);
+}
+.link-amber:hover { color: var(--flash-amber-400); }
+
+/* ── Divider ───────────────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: rgba(255,255,255,0.05);
+  border: none;
+}

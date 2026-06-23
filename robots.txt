@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /assets/audio/
+Disallow: /data/
+
+Sitemap: https://www.flashdelivery.co.za/sitemap.xml

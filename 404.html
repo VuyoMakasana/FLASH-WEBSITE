@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+  <meta name="theme-color" content="#080808" />
+  <title>Page Not Found — Flash</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to Flash and get your clothing delivered today." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header id="main-nav" class="nav scrolled" role="banner">
+    <div class="container nav__inner">
+      <a href="index.html" class="logo nav__logo" aria-label="Flash — Home">
+        <span class="logo-wordmark">FL<span class="logo-wordmark__zap" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" fill="#f59e0b"/></svg></span>SH</span>
+      </a>
+      <nav class="nav__links" role="navigation" aria-label="Main navigation">
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="how-it-works.html">How It Works</a>
+        <a class="nav__link" href="driver-partners.html">Drivers</a>
+        <a class="nav__link" href="merchant-partners.html">Sellers</a>
+        <a class="nav__link" href="investors.html">Investors</a>
+      </nav>
+      <div class="nav__actions">
+        <a class="btn btn--sm btn--outline-amber" href="driver-partners.html">Drive with Flash</a>
+        <a class="btn btn--sm btn--primary" href="index.html#download">Get the App</a>
+      </div>
+      <button class="nav__toggle" id="nav-toggle" aria-controls="nav-mobile" aria-expanded="false" aria-label="Toggle mobile menu">
+        <span id="nav-toggle-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+    <nav id="nav-mobile" class="nav__mobile" role="navigation" aria-label="Mobile navigation">
+      <a class="nav__mobile-link" href="index.html">Home</a>
+      <a class="nav__mobile-link" href="about.html">About</a>
+      <a class="nav__mobile-link" href="how-it-works.html">How It Works</a>
+      <a class="nav__mobile-link" href="driver-partners.html">Drivers</a>
+      <a class="nav__mobile-link" href="merchant-partners.html">Sellers</a>
+      <a class="nav__mobile-link" href="investors.html">Investors</a>
+      <a class="nav__mobile-link" href="careers.html">Careers</a>
+      <a class="nav__mobile-link" href="contact.html">Contact</a>
+      <a class="nav__mobile-link" href="faq.html">FAQ</a>
+      <div class="nav__mobile-actions">
+        <a class="btn btn--primary btn--full" href="index.html#download">Get the App</a>
+        <a class="btn btn--outline-amber btn--full" href="driver-partners.html">Drive with Flash</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main-content" class="bg-dark" style="min-height:100vh;">
+    <div class="not-found">
+      <div>
+        <div class="glow-orb glow-orb--amber" style="width:500px;height:500px;top:50%;left:50%;transform:translate(-50%,-50%);position:fixed;pointer-events:none;" aria-hidden="true"></div>
+        <div style="position:relative;">
+          <div class="not-found__code" aria-hidden="true">404</div>
+          <h1 class="not-found h2" style="font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;color:var(--flash-white);margin-top:var(--space-4);letter-spacing:-0.02em;">This page doesn't exist.</h1>
+          <p style="color:var(--flash-gray-400);margin-top:var(--space-3);max-width:28rem;margin-left:auto;margin-right:auto;line-height:1.7;">The link you followed may be broken or the page may have moved. Let's get you back on track.</p>
+          <div class="not-found__cta" style="display:flex;gap:var(--space-3);justify-content:center;flex-wrap:wrap;">
+            <a class="btn btn--primary btn--lg" href="index.html">Go to Homepage</a>
+            <a class="btn btn--outline" href="contact.html">Contact Support</a>
+          </div>
+          <nav aria-label="Helpful links" style="margin-top:var(--space-14);">
+            <p style="font-size:var(--text-sm);color:var(--flash-gray-600);margin-bottom:var(--space-5);">Or try one of these pages:</p>
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-3);justify-content:center;">
+              <a class="btn btn--ghost btn--sm" href="how-it-works.html">How It Works</a>
+              <a class="btn btn--ghost btn--sm" href="merchant-partners.html">Sell on Flash</a>
+              <a class="btn btn--ghost btn--sm" href="driver-partners.html">Drive with Flash</a>
+              <a class="btn btn--ghost btn--sm" href="faq.html">FAQ</a>
+              <a class="btn btn--ghost btn--sm" href="investors.html">Investors</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/navigation.js" defer></script>
+</body>
+</html>

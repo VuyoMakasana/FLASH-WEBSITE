@@ -1,0 +1,111 @@
+/* ============================================================
+   FLASH — responsive.css
+   Breakpoints: 375 | 640 | 768 | 1024 | 1280 | 1440 | 1920
+   ============================================================ */
+
+/* ── 375px: Standard phones ───────────────────────────── */
+@media (min-width: 375px) {
+  .hero-title { font-size: 3.25rem; }
+}
+
+/* ── 640px: Large phones / small tablets ─────────────── */
+@media (min-width: 640px) {
+  .hero-title { font-size: 4rem; }
+  .app-card__buttons { flex-direction: row; }
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+  .grid-2--sm { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ── 768px: Tablets ──────────────────────────────────── */
+@media (min-width: 768px) {
+  .hero-title   { font-size: 5rem; }
+  .section-title { font-size: 3rem; }
+
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+  }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .footer__grid { grid-template-columns: repeat(2, 1fr); }
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+/* ── 1024px: Desktops ────────────────────────────────── */
+@media (min-width: 1024px) {
+  .hero-title   { font-size: 5.5rem; }
+  .section-title { font-size: 3.5rem; }
+
+  .nav__links  { display: flex; }
+  .nav__actions { display: flex; }
+  .nav__toggle  { display: none; }
+  .nav__mobile  { display: none !important; }
+
+  .grid-2 { grid-template-columns: repeat(2, 1fr); gap: var(--space-20); }
+  .grid-2--reverse > :first-child { order: 2; }
+  .grid-2--reverse > :last-child  { order: 1; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+
+  .footer__grid { grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-8); }
+
+  .steps-grid { grid-template-columns: repeat(4, 1fr) !important; }
+  .features-grid { grid-template-columns: repeat(3, 1fr) !important; }
+  .app-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .investor-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* ── 1280px: Large desktops ──────────────────────────── */
+@media (min-width: 1280px) {
+  .hero-title { font-size: 6.5rem; }
+}
+
+/* ── 1440px: XL desktops ─────────────────────────────── */
+@media (min-width: 1440px) {
+  .hero-title { font-size: 7.5rem; }
+  .container {
+    padding-left: var(--space-16);
+    padding-right: var(--space-16);
+  }
+}
+
+/* ── 1920px: Full HD ─────────────────────────────────── */
+@media (min-width: 1920px) {
+  :root { --max-w-content: 90rem; }
+  .hero-title { font-size: 8.5rem; }
+  .section-title { font-size: 4.25rem; }
+}
+
+/* ── Mobile utilities ────────────────────────────────── */
+@media (max-width: 1023px) {
+  .hide-mob { display: none !important; }
+}
+
+@media (min-width: 1024px) {
+  .hide-desk { display: none !important; }
+}
+
+/* ── Smallest screens ────────────────────────────────── */
+@media (max-width: 374px) {
+  .hero-title { font-size: 2.75rem; }
+  .section-title { font-size: 1.875rem; }
+  .btn { padding: 0.75rem var(--space-6); font-size: var(--text-sm); }
+  .music-player__label { display: none; }
+  .music-player__vol { width: 48px; }
+}
+
+/* ── Safe area insets (iOS notch / home indicator) ─── */
+@supports (padding: max(0px)) {
+  .music-player {
+    bottom: max(var(--space-6), calc(env(safe-area-inset-bottom) + var(--space-3)));
+    right: max(var(--space-6), calc(env(safe-area-inset-right) + var(--space-4)));
+  }
+  .nav__mobile {
+    padding-bottom: max(var(--space-6), env(safe-area-inset-bottom));
+  }
+}
