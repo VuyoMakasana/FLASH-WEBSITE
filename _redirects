@@ -1,0 +1,23 @@
+# This site has moved to https://flashdelivery.co.za.
+# "!" forces each redirect even though the old files still exist here.
+# Old pages map straight to their new routes so they land in one hop;
+# everything else (including the flash-out/ copy) falls through to the
+# catch-all at the bottom. Netlify uses the first matching rule.
+
+/index.html              https://flashdelivery.co.za/               301!
+/about.html              https://flashdelivery.co.za/about          301!
+/how-it-works.html       https://flashdelivery.co.za/how-it-works   301!
+/merchant-partners.html  https://flashdelivery.co.za/stores         301!
+/driver-partners.html    https://flashdelivery.co.za/drivers        301!
+/investors.html          https://flashdelivery.co.za/investors      301!
+/faq.html                https://flashdelivery.co.za/faq            301!
+/contact.html            https://flashdelivery.co.za/contact        301!
+/careers.html            https://flashdelivery.co.za/careers        301!
+/press.html              https://flashdelivery.co.za/press          301!
+/privacy.html            https://flashdelivery.co.za/privacy        301!
+/terms.html              https://flashdelivery.co.za/terms          301!
+/cookies.html            https://flashdelivery.co.za/cookies        301!
+/security.html           https://flashdelivery.co.za/security       301!
+/accessibility.html      https://flashdelivery.co.za/accessibility  301!
+
+/*  https://flashdelivery.co.za/:splat  301!
