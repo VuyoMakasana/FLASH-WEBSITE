@@ -20,4 +20,10 @@
 /security.html           https://flashdelivery.co.za/security       301!
 /accessibility.html      https://flashdelivery.co.za/accessibility  301!
 
+# Clean-URL variants of the two renamed pages.
+/merchant-partners       https://flashdelivery.co.za/stores         301!
+/driver-partners         https://flashdelivery.co.za/drivers        301!
+
+/flash-out/*  https://flashdelivery.co.za/:splat  301!
+
 /*  https://flashdelivery.co.za/:splat  301!
